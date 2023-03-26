@@ -1,0 +1,56 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow'
+###
+name: Education Project Flow
+description: null
+version: 0597579beec3a8a567eacd748b697d8c
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: f7237745-3d5c-43ba-a503-84a8cfce4b2c
+  _block_document_name: anonymous-7aa88a0a-2fdd-4f60-9551-2c9f22ba3e06
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /home/z01/dzc_project
+entrypoint: etl_web_to_gcs.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    years:
+      title: years
+      default:
+      - 2022
+      - 2021
+      - 2019
+      - 2018
+      - 2017
+      - 2016
+      - 2015
+      - 2014
+      - 2013
+      position: 0
+      type: array
+      items:
+        type: integer
+  required: null
+  definitions: null
